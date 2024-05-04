@@ -1,0 +1,31 @@
+GitHub Minesweeper rules
+
+Goal of the game: flag all mines
+
+Available commands to add to commands.json:
+
+    clear [field]: e.g. "clear A9", clears the selected field
+    flag [field]: e.g. "flag A9", flags the selected field. Should be used when you think this field is a mine.
+    unflag [field]: e.g. "unflag A9", removes a flag from the selected field. Should be used if you mistakenly flagged a field.
+    end: once you flagged all mines you can end the game with this command. Tara will reveal the board and create a new PR to restart the game.
+
+Trunk-Based Development
+
+    Sync the local main branch.
+    Check out a new branch from main.
+    Add new commands to commands.json.
+    Commit and push the changes.
+    Open a Pull Request.
+    Wait for the CI checks to pass.
+    Request a review by Tara.
+    Merge the PR if it was approved. If you hit a mine, restart the game by approving and merging the PR created by Tara.
+
+Git Cheat Sheet
+
+Here is a list of Git commands in the order you need them for Trunk-Based Development:
+
+    Check out the main branch: git checkout main
+    Sync the local and remote main branches: git pull origin main
+    Create and check out a new branch: git checkout -b YOUR_BRANCH_NAME
+    Commit all file changes: git commit -a -m "YOUR_COMMIT_MESSAGE"
+    Push the changes to the remote repo on GitHub: git push origin YOUR_BRANCH_NAME
